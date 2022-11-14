@@ -70,8 +70,6 @@ def add_restaurant():
         restaurant.description = description
         db.session.add(restaurant)
         db.session.commit()
-        print('Nouveau restaurant ajouté.')
-        print(os.environ['WEBSITE_HOSTNAME'])
 
         return redirect(url_for('details', id=restaurant.id))
 
